@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import GameBtn from "./GameBtn";
+import Footer from "./Footer";
 
 const colors = ["green", "red", "yellow", "blue"];
 
@@ -98,8 +99,9 @@ function SimonGame() {
 
   return (
     // Main container
-    <div className="flex justify-center items-center bg-neutral-800 text-white w-screen h-screen">
-      {/* Game container */}
+    <div className="flex justify-center items-center bg-neutral-800 text-white w-screen h-screen flex-col min-h-screen">
+        <main className="flex">
+                  {/* Game container */}
       <div className="relative flex flex-col justify-center items-center">
         {/* Green and red container */}
         <div>
@@ -151,6 +153,8 @@ function SimonGame() {
           {sequence.length === 0 ? "Play" : sequence.length}
         </button>
       </div>
+        </main>
+      <Footer />
     </div>
   );
 }
